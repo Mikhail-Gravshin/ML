@@ -1,0 +1,10 @@
+^C:\OTUS\ML\BUILD\CMAKEFILES\79D5E9D3BB8B0EC3C95B416C269A4747\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Otus/ML -BC:/Otus/ML/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Otus/ML/build/01.ML.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
